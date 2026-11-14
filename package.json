@@ -1,0 +1,17 @@
+{
+  "name": "captcha-solver-extension",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Extension tu dien captcha hoadondientu.gdt.gov.vn",
+  "scripts": {
+    "build": "node build.mjs",
+    "dev": "node build.mjs --watch",
+    "typecheck": "tsc"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.3.7",
+    "esbuild": "^0.28.2",
+    "typescript": "^7.0.2"
+  }
+}
