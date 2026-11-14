@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chính sách quyền riêng tư — Captcha Solver</title>
+<style>
+  :root {
+    --ink: #172a45;
+    --muted: #5b6b80;
+    --line: #e3e8ef;
+    --accent: #22c55e;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 48px 20px 96px;
+    font: 16px/1.7 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    color: var(--ink);
+    background: #f7f9fc;
+  }
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 40px;
+  }
+  h1 { font-size: 24px; line-height: 1.3; margin: 0 0 6px; }
+  h2 { font-size: 17px; margin: 32px 0 10px; }
+  .sub { color: var(--muted); margin: 0 0 4px; }
+  .date { color: var(--muted); font-size: 14px; margin: 0; }
+  hr { border: 0; border-top: 1px solid var(--line); margin: 32px 0; }
+  ul { padding-left: 20px; margin: 10px 0; }
+  li { margin: 6px 0; }
+  .highlight {
+    background: #f0fdf4;
+    border-left: 3px solid var(--accent);
+    padding: 14px 18px;
+    border-radius: 0 6px 6px 0;
+    margin: 20px 0;
+  }
+  .highlight p { margin: 0; }
+  code {
+    background: #f1f4f8;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+  }
+  footer { color: var(--muted); font-size: 14px; margin-top: 36px; }
+  a { color: #1d4ed8; }
+  .en { color: var(--muted); }
+  .en h2 { color: var(--ink); }
+</style>
+</head>
+<body>
+<main>
+
+  <h1>Chính sách quyền riêng tư</h1>
+  <p class="sub">Tiện ích Chrome &ldquo;Captcha Solver&rdquo;</p>
+  <p class="date">Cập nhật lần cuối: 14/11/2026</p>
+
+  <div class="highlight">
+    <p><strong>Tiện ích này không thu thập, không lưu trữ và không truyền đi bất kỳ dữ liệu nào của người dùng.</strong> Toàn bộ xử lý diễn ra trong trình duyệt, trên máy của người dùng.</p>
+  </div>
+
+  <h2>1. Dữ liệu thu thập</h2>
+  <p>Không. Tiện ích không thu thập bất kỳ loại dữ liệu nào, bao gồm:</p>
+  <ul>
+    <li>Thông tin định danh cá nhân (tên, email, địa chỉ, số điện thoại)</li>
+    <li>Thông tin đăng nhập, mật khẩu, mã số thuế</li>
+    <li>Nội dung hóa đơn hoặc dữ liệu tài chính</li>
+    <li>Lịch sử duyệt web, vị trí, hoạt động người dùng</li>
+    <li>Dữ liệu phân tích hay thống kê sử dụng</li>
+  </ul>
+
+  <h2>2. Tiện ích làm gì trên trang</h2>
+  <p>Tiện ích chỉ hoạt động trên cổng thuế <code>gdt.gov.vn</code>. Trên trang đó, tiện ích:</p>
+  <ul>
+    <li>Đọc hình ảnh captcha đang hiển thị trên trang</li>
+    <li>Phân tích hình ảnh đó ngay trong trình duyệt, bằng một bộ mẫu ký tự được đóng gói sẵn bên trong tiện ích</li>
+    <li>Điền kết quả vào ô nhập mã captcha tương ứng trong cùng biểu mẫu</li>
+  </ul>
+  <p>Tiện ích <strong>không</strong> đọc tên đăng nhập, mật khẩu, nội dung hóa đơn hay bất kỳ trường dữ liệu nào khác trên trang.</p>
+
+  <h2>3. Kết nối mạng</h2>
+  <p>Tiện ích không thực hiện bất kỳ kết nối mạng nào. Không có máy chủ nào nhận dữ liệu từ tiện ích, kể cả máy chủ của nhà phát triển. Bộ mẫu ký tự dùng để nhận dạng được đóng gói sẵn trong tiện ích, không tải về từ bên ngoài.</p>
+
+  <h2>4. Quyền truy cập</h2>
+  <p>Tiện ích không yêu cầu quyền (<code>permissions</code>) nào của Chrome. Phạm vi hoạt động duy nhất là cổng thuế <code>gdt.gov.vn</code>, khai báo trong <code>content_scripts</code>. Tiện ích không chạy trên bất kỳ trang nào khác.</p>
+
+  <h2>5. Chia sẻ dữ liệu với bên thứ ba</h2>
+  <p>Không có dữ liệu nào được thu thập, nên không có dữ liệu nào để chia sẻ, bán hoặc chuyển giao. Tiện ích không sử dụng dịch vụ phân tích, quảng cáo hay theo dõi của bên thứ ba.</p>
+
+  <h2>6. Lưu trữ cục bộ</h2>
+  <p>Tiện ích không sử dụng <code>chrome.storage</code>, cookie hay bất kỳ cơ chế lưu trữ nào. Không có dữ liệu nào được giữ lại sau khi đóng trang.</p>
+
+  <h2>7. Thay đổi chính sách</h2>
+  <p>Nếu chính sách này thay đổi, phiên bản mới sẽ được đăng tại chính địa chỉ này kèm ngày cập nhật.</p>
+
+  <h2>8. Liên hệ</h2>
+  <p>Mọi thắc mắc về chính sách này, vui lòng liên hệ: <a href="mailto:ducminhh219@gmail.com">ducminhh219@gmail.com</a></p>
+
+  <h2>9. Tuyên bố độc lập</h2>
+  <p>Tiện ích được phát triển độc lập và không có liên kết, không được tài trợ hay xác nhận bởi Tổng cục Thuế hoặc bất kỳ cơ quan nhà nước nào.</p>
+
+  <hr>
+
+  <div class="en">
+    <h2>Privacy Policy (English)</h2>
+    <p><strong>This extension does not collect, store, or transmit any user data.</strong> All processing happens locally in the user's browser.</p>
+    <p>The extension runs only on the General Department of Taxation&rsquo;s e-invoice portal at <code>gdt.gov.vn</code>. On that site it reads the captcha image displayed on the page, analyses it locally using a character template set bundled inside the extension, and fills the result into the corresponding captcha input field in the same form.</p>
+    <p>It does not read usernames, passwords, invoice contents, or any other field on the page. It makes no network requests of any kind — no server, including the developer's, receives any data. It requests no Chrome permissions and uses no storage, cookies, analytics, or third-party services. No data is collected, therefore none is shared, sold, or transferred.</p>
+    <p>This extension is developed independently and is not affiliated with, sponsored by, or endorsed by the General Department of Taxation of Vietnam or any government agency.</p>
+    <p>Contact: <a href="mailto:ducminhh219@gmail.com">ducminhh219@gmail.com</a></p>
+  </div>
+
+  <footer>Cập nhật lần cuối: 14/11/2026</footer>
+
+</main>
+</body>
+</html>
